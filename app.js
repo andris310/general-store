@@ -48,7 +48,7 @@ app.use(bodyParser.urlencoded({
 }));
 console.log('SECRET: ', process.env.SESSION_SECRET)
 app.use(session({
-  secret: 'process.env.SESSION_SECRET',
+  secret: process.env.SESSION_SECRET,
   saveUninitialized: true,
   resave: true
 }));
