@@ -1,7 +1,18 @@
-doctype 5
-html
+doctype html
+html(lang="en")
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    meta(name='description', content='#{metaDescription}')
+    link(rel='stylesheet', href='/styles/#{alias}.css', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900', rel='stylesheet', type='text/css')
+
   body
-    block content
+    header.wrap.header
+
+    #container.wrap
+      block content
+
+  block scripts
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js')
+    script(src='//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js')
+    script(src='/javascripts/#{alias}.js')
